@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Strategy pattern</title>
+    <script src="Main.js" type="application/javascript"></script>
+</head>
+<body>
+
+
+<p id="output"></p>
+<script>
+    // Zet deze script tags onderaan te pagina, zodat alle HTML elemeneten zeker geladen zijn !
+
+    // De paragraaf "output" aanspreken of later de output van de functie in weer te geven.
+    var output = document.getElementById("output");
+    var array = [25, 84, 59, 20, 15, 1, 98, 63, 47];
+
+    // Aangezien we bovenaan in de header de javascript file hebben geimporteerd kunnen we gewoon de Sorter functie aanspreken
+    var sorter = new Sorter(bubbleStrategy, array);
+
+    // Vergeet de tostring methode niet, anders krijg je geen output!
+    output.innerHTML = sorter.sort().toString();
+
+
+</script>
+
+</body>
+</html>
