@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Decorator pattern</title>
+    <script src="Main.js" type="application/javascript"></script>
+</head>
+<body>
+
+<p id="output"> Alles is te zien in de console!</p>
+
+<script>
+
+    var koffie = new coffee();
+    koffie = new soy(koffie);
+    koffie = new caramel(koffie);
+    koffie = new whip(koffie);
+    koffie = new milk(koffie);
+
+    getRekening(koffie);
+
+    var thee = new tea();
+    thee = new lemon(thee);
+    thee = new orange(thee);
+    thee = new milk(thee);
+
+    getRekening(thee);
+
+</script>
+
+</body>
+</html>
